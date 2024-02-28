@@ -1,0 +1,6 @@
+char = input("Digite qualquer coisa: ")
+print("Alfabetico? ", char.isalpha())
+print("Numerico?", char.isnumeric())
+print("Alfanumerico? ", char.isalnum())
+print("Esta todo em maiuscula?", char.isupper())
+print("Esta todo em minuscula?", char.islower())
