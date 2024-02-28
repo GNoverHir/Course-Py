@@ -1,0 +1,6 @@
+Palavra mais frequente: asd
+Frequência: 2
+
+==================================================
+Letra mais frequente: a
+Frequência: 27

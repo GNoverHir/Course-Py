@@ -1,3 +1,5 @@
+from pprint import pprint
+
 # arquivo = open("./exemplo.txt")
 
 # # lê todo o conteúdo do arquivo
@@ -24,6 +26,11 @@
 # # escreve no arquivo aberto
 # f.write("Oi :+)")
 
+# 'r'
+# 'w'
+# 'x' Abre um novo arquivo caso n exista
+# 'a' append vai para a ultima linha/ultimo caracter e começa escrever a partir dali
+# '+' 
 
 # with open("exemplo.txt", "r+") as f:
 #     texto = f.read()
@@ -37,29 +44,29 @@ conta_letras = {}
 conta_palavras = {}
 for linha in texto:
     palavras = linha.split()
-    for char in palavras:
-        conta_palavras[char] = conta_palavras.get(char, 0) + 1
-        for letra in char:
+    for palavra in palavras:
+        conta_palavras[palavra] = conta_palavras.get(palavra, 0) + 1
+        for letra in palavra:
             conta_letras[letra] = conta_letras.get(letra, 0) + 1
     # conta_letras[letra] = conta_letras.get(letra, 0) + 1
 
 
 # from pprint import pprint
 
-# pprint(conta_letras)
-# pprint(conta_palavras)
+pprint(conta_letras)
+pprint(conta_palavras)
 
 # DESAFIO: Encontrar a palavra e a letra mais frequentes e salvá-los em um arquivo
 
 max_palavra = [None, 0]
-for char, count in conta_palavras.items():
+for palavra, count in conta_palavras.items():
     if max_palavra[1] < count:
-        max_palavra = [char, count]
+        max_palavra = [palavra, count]
 
 max_char = [None, 0]
-for char, count in conta_letras.items():
+for palavra, count in conta_letras.items():
     if max_char[1] < count:
-        max_char = [char, count]
+        max_char = [palavra, count]
 
 with open("result.txt", "w") as f:
     f.write(f"Palavra mais frequente: {max_palavra[0]}\n")
@@ -67,3 +74,5 @@ with open("result.txt", "w") as f:
     f.write("\n" + "=" * 50 + "\n")
     f.write(f"Letra mais frequente: {max_char[0]}\n")
     f.write(f"Frequência: {max_char[1]}\n")
+
+
