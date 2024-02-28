@@ -75,4 +75,4 @@ with open("result.txt", "w") as f:
     f.write(f"Letra mais frequente: {max_char[0]}\n")
     f.write(f"Frequência: {max_char[1]}\n")
 
-
+import emoji
