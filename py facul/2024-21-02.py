@@ -51,7 +51,9 @@ def update(bd):
     value = input("Digite o novo valor: ")
 
     for record in results:
-        record[key] = value
+        if record[key] == value:
+            
+        
 
 
 BD = create()
@@ -66,4 +68,4 @@ BD = create()
 
 
 # Abrindo um arquivo em python
-open("./2024-16-02.py")
+# open("./2024-16-02.py")
